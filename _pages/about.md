@@ -19,4 +19,6 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm a cuber, writer, violinist, and mathematics-enjoyer.
+Hi! I'm Hillary. When I laugh too hard, I don't make a noise. I used (nearly) exclusively two spoons for the entirety of my childhood, and my favorite movement of Holst's The Planets is Venus, the Bringer of Peace. 
+
+My favorite WCA events are pyraminx and 3x3, and I occasionally compete around the Great Lakes region. See my World Cube Association profile <a href="https://www.worldcubeassociation.org/persons/2019YANH09">here</a>. 
