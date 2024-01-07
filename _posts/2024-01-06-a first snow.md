@@ -4,6 +4,7 @@ title: a first snow
 date: 2024-01-06 2:15:00-0400
 description: a walk around the pond
 tags: 
+disqus_comments: true
 categories: 
 related_posts: false
 ---
