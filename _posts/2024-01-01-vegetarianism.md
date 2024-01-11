@@ -18,4 +18,4 @@ i suppose i should actually answer the question. i choose to be vegetarian becau
 
 i loved meat, i won’t deny that. but i also was acutely, uncomfortably aware of the implications of every bite, not for the planet, but for me. what did eating this pork rib really mean to me, in the deepest part of my conscience? could i allow myself to gorge on this animal that nature had so perfectly created, then walk away from the dinner table, without feeling guilty? i already lather myself in the hard work of nature. i’ve taken too much from the world already, so the simple act of restraining from meat sits better in my heart and mind. 
 
-so, those are my reasons. i hope they don’t make me seem like a deeply spiritual person or anything. hopefully they give you more insight. 
+those are my reasons. i hope they give you some insight!
