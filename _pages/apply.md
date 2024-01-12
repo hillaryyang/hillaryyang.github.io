@@ -2,7 +2,7 @@
 layout: page
 permalink: /apply/
 title: apply
-description: apply for a position!
+description: 
 nav: true
 nav_order: 2
 ---
