@@ -118,8 +118,8 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: from the bean # blog_name will be displayed in your blog page
-blog_description: a constant work in progress
+blog_name: sonder # blog_name will be displayed in your blog page
+blog_description: "n. the realization that each random passerby is living a life as vivid and complex as your own"
 permalink: /blog/:year/:title/
 
 # Pagination
