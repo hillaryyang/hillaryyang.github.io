@@ -7,11 +7,11 @@ nav: true
 nav_order: 2
 ---
 
-<h2>Friend</h2>
+<h4>Friend</h4>
 Looking for friendly individuals to provide friendship. Send me a Discord message!
 <hr>
-<h2>Recommender</h2>
+<h4>Recommender</h4>
 Have any book/song/movie/show/hotel recommendations? Please, tell me. I'm always interested in reading/listening/watching new things. (Oh, and staying in awesome hotels)
 <hr>
-<h2>Opponent</h2>
+<h4>Opponent</h4>
 A nemesis, to spice things up. 
