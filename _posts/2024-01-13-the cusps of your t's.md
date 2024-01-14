@@ -9,11 +9,19 @@ related_posts: false
 ---
 
 your t’s are beautiful.
+
 that day, i watched you closely,
+
 as you carelessly but
+
 so beautifully 
+
 curled their ends, and
+
 extended their dashes 
+
 so slightly longer to the left.
+
 one must imagine them happy, 
+
 birthed by your hand.
