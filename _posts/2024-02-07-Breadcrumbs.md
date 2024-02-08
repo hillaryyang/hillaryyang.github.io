@@ -20,13 +20,13 @@ a fire that is impossible to quench...
 
 and rarely, it's an easing, world-shattering relief
 
-which dampens the pain of memory.
+which snuffs out the pain of memory.
 
 I'm all chopped into pieces. 
 
 I'm left in Amherst, in Wichita, and in Bloomington.
 
-I left behind the child who loved to play in the roadside gutters in the summer rain,
+I left behind the child who loved to play in the roadside gutters when it rained,
 
 who loved the smell of sunburnt tomatoes and fresh dill,
 
