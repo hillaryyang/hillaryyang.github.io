@@ -19,6 +19,6 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hi! I'm Hillary. I keep a large notebook on my bed so that my midnight thoughts won't go forgotten. I used (nearly) exclusively two spoons for the entirety of my childhood, and my favorite movement of Holst's The Planets is Venus, the Bringer of Peace. I'm also really Mitski's Spotify artist "<a href=" https://open.spotify.com/artist/2uYWxilOVlUdk4oV9DvwqK?si=hl-QuVBOTeWHmL6RxFCi9A">About</a>" section.
+Hi! I'm Hillary. I keep a large notebook on my bed so that my midnight thoughts won't go forgotten. I used (nearly) exclusively two spoons for the entirety of my childhood, and my favorite movement of Holst's The Planets is Venus, the Bringer of Peace. I'm also really into Mitski's Spotify artist "<a href=" https://open.spotify.com/artist/2uYWxilOVlUdk4oV9DvwqK?si=hl-QuVBOTeWHmL6RxFCi9A">About</a>" section.
 
 My favorite WCA events are pyraminx and 3x3, and I compete around the Great Lakes region. See my World Cube Association profile <a href="https://www.worldcubeassociation.org/persons/2019YANH09">here</a>. I'm attempting to learn 3x3 blindfolded - maybe someday my Google Sheet of <a href="https://docs.google.com/spreadsheets/d/1WyROUpM8wQhRtwNEOtzwwgzXxfAidAwrI-9usNa8gVM/edit?usp=sharing">letter pairs</a> will be completed.
