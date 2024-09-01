@@ -19,4 +19,4 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hi! I'm Hillary. I used (nearly) exclusively two spoons for the entirety of my childhood and my favorite movement of Holst's The Planets is Venus, the Bringer of Peace. I'm also really into Mitski's Spotify artist "<a href=" https://open.spotify.com/artist/2uYWxilOVlUdk4oV9DvwqK?si=hl-QuVBOTeWHmL6RxFCi9A">About</a>" section. I'm also interested in cubing; my favorite WCA events are pyraminx and 3x3, and I compete around the Great Lakes region. See my World Cube Association profile <a href="https://www.worldcubeassociation.org/persons/2019YANH09">here</a>.
+Hi! I'm Hillary. I use this site (mainly) for my short, spontaneous writing projects, so go check them out!
