@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Hillary
 middle_name: 
 last_name: Yang
-email: hillaryyang2@gmail.com
+email: # hillaryyang2@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
@@ -98,7 +98,7 @@ unsplash_id: # your unsplash id
 instagram_id: # your instagram id
 facebook_id: # your facebook id
 youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
-discord_id: 740036977289723965 # your discord id (18-digit unique numerical identifier)
+discord_id: # 740036977289723965 # your discord id (18-digit unique numerical identifier)
 zotero_username: # your zotero username
 wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 
