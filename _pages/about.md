@@ -19,4 +19,4 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hi! I'm Hillary. I use this site (mainly) for my short, spontaneous writing projects, so go check them out!
+Hi! I'm Hillary. I use this site for my short, spontaneous writing projects, so go check them out!
