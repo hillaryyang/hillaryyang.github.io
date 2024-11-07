@@ -1,7 +1,5 @@
 - name: Home
   link: /
-- name: About
-  link: _layouts/about.html
 - name: Blog
   link: _layouts/blog.html
 - name: Projects
