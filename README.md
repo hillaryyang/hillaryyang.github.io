@@ -7,3 +7,4 @@ to be added:
 * light/dark themes + cooler colors
 * cleaner footer 
 * better fonts, change theme maybe?
+* add a favicon!
