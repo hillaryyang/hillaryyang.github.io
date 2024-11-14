@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: vegetarianism
 date: 2024-01-07 8:36:00-0400
 ---

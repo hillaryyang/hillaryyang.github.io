@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: the physics of love
 date: 2024-05-30 10:10:00-0400
 ---

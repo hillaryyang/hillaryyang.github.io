@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: a first snow
 date: 2024-01-06 2:15:00-0400
 ---

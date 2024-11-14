@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Breadcrumbs
 date: 2024-02-07 7:12:00-0400
 ---
