@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: can you believe it?
 date: 2024-06-10 3:29:00-0400
 ---

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: House of thorns
 date: 2024-03-15 11:42:00-0400
 ---

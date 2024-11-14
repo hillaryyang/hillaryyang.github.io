@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: confusions
 date: 2024-09-01 11:40:00-0400
 ---

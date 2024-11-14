@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: the cusps of your t's
 date: 2024-01-13 7:03:00-0400
 ---
