@@ -1,3 +1,38 @@
 ---
-layout: blog
+layout: default
+title: Blog
 ---
+
+<style>
+  /* Basic Styling */
+  .post-item {
+    border-bottom: 1px solid hsl(0, 0%, 27%);
+    padding: 1.5rem 0;
+    color: #ccc;
+  }
+
+  .post-item h2 {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  .post-meta {
+    font-size: 0.875rem;
+    color: #888;
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+</style>
+
+<h1>Sonder</h1>
+
+{% for post in site.posts %}
+  <div class="post-item">
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    
+    <div class="post-meta">
+      <span>{{ post.date | date: "%b %d, %Y" }}</span>
+    </div>
+  </div>
+{% endfor %}

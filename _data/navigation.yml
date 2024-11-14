@@ -1,0 +1,6 @@
+- name: Home
+  link: /
+- name: Blog
+  link: _layouts/blog.html
+- name: Projects
+  link: _layouts/projects.html
