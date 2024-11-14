@@ -8,4 +8,3 @@ to be added:
 * cleaner footer 
 * better fonts, change theme maybe?
 * add a favicon!
->>>>>>> main
