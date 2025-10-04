@@ -1,0 +1,115 @@
+---
+layout: page
+---
+
+<link rel="stylesheet" href="/assets/css/goodreads.css">
+
+<div class="layout--reading">
+  {%- if content != "" -%}
+  <div class="reading-intro">
+    {{ content }}
+  </div>
+  {%- endif -%}
+  
+  <section class="goodreads-container">
+    <h2 class="section-title">Currently Reading</h2>
+    <div id="goodreads-current-recent"></div>
+  </section>
+  
+  <hr class="goodreads-divider">
+  
+  <section class="goodreads-container">
+    <h2 class="section-title">The Unputdownables</h2>
+    <div id="goodreads-favorites"></div>
+  </section>
+  
+  <hr class="goodreads-divider">
+  
+  <section class="goodreads-container">
+    <h2 class="section-title">Least Favorites</h2>
+    <div id="goodreads-least-favorites"></div>
+  </section>
+</div>
+
+<script src="/assets/js/goodreads.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Manual cover overrides from _data/book_covers.yml
+    const manualCovers = {
+      {%- for cover in site.data.book_covers -%}
+        "{{ cover[0] }}": "{{ cover[1] }}"{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    };
+    
+    // Manual rating overrides from _data/book_ratings.yml
+    const manualRatings = {
+      {%- for rating in site.data.book_ratings -%}
+        "{{ rating[0] }}": {{ rating[1] }}{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    };
+    
+    // Currently Reading widget
+    const currentRecentWidget = new GoodreadsWidget({
+      userId: '176820268',
+      shelf: 'currently-reading',
+      containerId: 'goodreads-current-recent',
+      limit: 20,
+      manualCovers: manualCovers,
+      manualRatings: manualRatings,
+      showRatings: false
+    });
+    currentRecentWidget.init();
+    
+    // Favorites widget
+    const favoritesWidget = new GoodreadsWidget({
+      userId: '176820268',
+      shelf: 'favorites',
+      containerId: 'goodreads-favorites',
+      limit: 20,
+      manualCovers: manualCovers,
+      manualRatings: manualRatings
+    });
+    favoritesWidget.init();
+    
+    // Least Favorites widget - from 'bad' shelf
+    const leastFavoritesWidget = new GoodreadsWidget({
+      userId: '176820268',
+      shelf: 'bad',
+      containerId: 'goodreads-least-favorites',
+      limit: 20,
+      manualCovers: manualCovers,
+      manualRatings: manualRatings,
+      showRatings: false
+    });
+    leastFavoritesWidget.init();
+  });
+</script>
+
+<style>
+/* Reading page layout styles */
+.layout--reading {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.reading-intro {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.reading-intro p {
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+</style>
+

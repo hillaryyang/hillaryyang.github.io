@@ -1,0 +1,132 @@
+/* Goodreads Widget Styles */
+
+.goodreads-container {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.goodreads-container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.goodreads-loading {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 2rem;
+}
+
+.goodreads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .goodreads-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+.goodreads-book-card {
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.goodreads-book-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.goodreads-book-cover {
+  width: 150px;
+  height: 225px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 0 auto;
+  display: block;
+  background: rgba(0, 0, 0, 0.02);
+  object-fit: cover;
+  object-position: center;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.goodreads-book-card:hover .goodreads-book-cover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.goodreads-book-cover--placeholder {
+  width: 100%;
+  max-width: 150px;
+  height: 225px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.goodreads-book-cover--placeholder::after {
+  content: '📚';
+  font-size: 2rem;
+  opacity: 0.3;
+}
+
+.goodreads-book-info {
+  margin-top: 0.75rem;
+}
+
+.goodreads-book-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.3;
+  min-height: 2.6em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.goodreads-book-link:hover .goodreads-book-title {
+  text-decoration: underline;
+}
+
+.goodreads-book-author {
+  font-size: 0.8rem;
+  color: #666;
+  font-style: italic;
+  margin: 0.25rem 0;
+  line-height: 1.2;
+}
+
+.goodreads-book-rating {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.goodreads-book-rating .star-full {
+  color: #f4c542;
+}
+
+.goodreads-book-rating .star-empty {
+  color: #ddd;
+}
+
+/* Section divider */
+.goodreads-divider {
+  border: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 3rem 0 2rem 0;
+}
+
