@@ -72,3 +72,138 @@
 
     "custom"
 ;
+
+/* Book cards in grid */
+.book-card {
+  text-align: center;
+}
+.book-card__cover {
+  display: block;
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  margin: 0 auto;
+  transition: transform 0.2s ease;
+}
+.book-card__cover:hover {
+  transform: translateY(-4px);
+}
+.book-card__cover--placeholder {
+  background: rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 140px;
+  height: 210px;
+  margin: 0 auto;
+}
+.book-card__title {
+  margin-top: .75rem;
+  font-size: .9rem;
+}
+.book-card__title a {
+  text-decoration: none;
+}
+.book-card__title a:hover {
+  text-decoration: underline;
+}
+
+/* Book review page - matching article layout style */
+.layout--book {
+  .book__back {
+    margin-bottom: map-get($spacers, 3);
+    
+    a {
+      color: $text-color-l;
+      text-decoration: none;
+      font-size: map-get($base, font-size-sm);
+      transition: color 0.2s ease;
+      
+      &:hover {
+        color: $text-color;
+      }
+    }
+  }
+  
+  .book__header {
+    margin-bottom: map-get($spacers, 4);
+  }
+  
+  .book__header-inner {
+    display: flex;
+    gap: map-get($spacers, 4);
+    align-items: flex-start;
+  }
+  
+  .book__cover {
+    flex-shrink: 0;
+    img {
+      width: 150px;
+      height: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .book__info {
+    flex: 1;
+    h1 {
+      margin-top: 0;
+    }
+  }
+  
+  .book__author {
+    margin: map-get($spacers, 2) 0;
+    font-style: italic;
+    color: $text-color-l;
+  }
+  
+  .book__meta {
+    margin-top: map-get($spacers, 2);
+    color: $text-color-l;
+    font-size: map-get($base, font-size-sm);
+  }
+  
+  .book__rating {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    
+    .star-full {
+      color: #f4c542;
+    }
+    
+    .star-half {
+      background: linear-gradient(90deg, #f4c542 50%, transparent 50%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #f4c542;
+      position: relative;
+      display: inline-block;
+      
+      &::before {
+        content: '★';
+        background: linear-gradient(90deg, #f4c542 50%, #ddd 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    
+    .star-empty {
+      color: #ddd;
+    }
+  }
+  
+  .book__summary,
+  .book__notes,
+  .book__quotes,
+  .book__takeaways {
+    margin-top: map-get($spacers, 4);
+  }
+
+  @media (max-width: 768px) {
+    .book__header-inner {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
