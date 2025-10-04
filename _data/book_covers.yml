@@ -1,0 +1,9 @@
+# Manual book cover overrides for Goodreads books
+# Add entries in this format:
+# "Book Title": "/assets/images/covers/book-title.jpg"
+
+# Example:
+"Tomorrow, and Tomorrow, and Tomorrow": "/assets/images/covers/ttt.jpg"
+"A Little Life": "/assets/images/covers/all.jpg"
+"Red, White & Royal Blue": "/assets/images/covers/rwrb.jpg"
+"Everything I Never Told You": "/assets/images/covers/einty.jpg"

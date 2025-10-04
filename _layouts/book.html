@@ -35,8 +35,9 @@ show_date: false
               <span class="book__rating" aria-label="Rating: {{ page.rating }} out of 5">
                 {%- assign _rating_full = page.rating | floor -%}
                 {%- assign _rating_decimal = page.rating | minus: _rating_full -%}
+                {%- assign _rating_next = _rating_full | plus: 1 -%}
                 {%- for i in (1..5) -%}
-                  {%- if i <= _rating_full -%}<span class="star-full">★</span>{%- elsif i == _rating_full | plus: 1 and _rating_decimal >= 0.5 -%}<span class="star-half">★</span>{%- else -%}<span class="star-empty">☆</span>{%- endif -%}
+                  {%- if i <= _rating_full -%}<span class="star-full">★</span>{%- elsif i == _rating_next and _rating_decimal >= 0.5 -%}<span class="star-half">★</span>{%- else -%}<span class="star-empty">☆</span>{%- endif -%}
                 {%- endfor -%}
               </span>
             {%- endif -%}

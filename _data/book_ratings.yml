@@ -1,0 +1,6 @@
+# Manual rating overrides for Goodreads books
+# Format: "Book Title": 5
+# Use this if Goodreads ratings aren't displaying correctly
+
+"Red, White & Royal Blue": 5
+
