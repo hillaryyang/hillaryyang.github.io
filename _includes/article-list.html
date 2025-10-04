@@ -110,31 +110,32 @@
     {%- elsif include.type == 'grid' -%}
       {%- if include.size == 'sm' -%}
         <div class="cell cell--12 cell--md-4 cell--lg-3">
-          <div class="card card--flat">
+          <div class="card card--flat book-card">
             {%- if _article.cover -%}
-              <div class="card__image">
-                <img class="image" src="{{ _article_cover }}" />
-                <div class="overlay overlay--bottom">
-                  <header>
-                    <a href="{{ _article_url }}"><h2 class="card__header">{{ _article.title }}</h2></a>
-                  </header>
-                </div>
-              </div>
+              <a class="book-card__cover-link" href="{{ _article_url }}">
+                <img class="book-card__cover" src="{{ _article_cover }}" alt="{{ _article.title }} cover" />
+              </a>
+            {%- else -%}
+              <a class="book-card__cover-link" href="{{ _article_url }}">
+                <div class="book-card__cover book-card__cover--placeholder"></div>
+              </a>
             {%- endif -%}
-            </div>
+            <div class="book-card__title"><a href="{{ _article_url }}">{{ _article.title }}</a></div>
+          </div>
         </div>
       {%- else -%}
-
         <div class="cell cell--12 cell--md-6 cell--lg-4">
-          <div class="card card--flat">
+          <div class="card card--flat book-card">
             {%- if _article.cover -%}
-              <div class="card__image"><img src="{{ _article_cover }}" /></div>
+              <a class="book-card__cover-link" href="{{ _article_url }}">
+                <img class="book-card__cover" src="{{ _article_cover }}" alt="{{ _article.title }} cover" />
+              </a>
+            {%- else -%}
+              <a class="book-card__cover-link" href="{{ _article_url }}">
+                <div class="book-card__cover book-card__cover--placeholder"></div>
+              </a>
             {%- endif -%}
-              <div class="card__content">
-                <header>
-                  <a href="{{ _article_url }}"><h2 class="card__header">{{ _article.title }}</h2></a>
-                </header>
-              </div>
+            <div class="book-card__title"><a href="{{ _article_url }}">{{ _article.title }}</a></div>
           </div>
         </div>
       {%- endif -%}

@@ -1,0 +1,87 @@
+---
+layout: page
+show_title: false
+article_header: false
+aside:
+  toc: false
+show_edit_on_github: false
+show_subscribe: false
+author: false
+show_author_profile: false
+show_date: false
+---
+
+<div class="layout--book">
+  <article itemscope itemtype="http://schema.org/Article">
+    <div class="book__back">
+      <a href="/reading/">← Back</a>
+    </div>
+    
+    <div class="book__header">
+      <div class="book__header-inner">
+        {%- if page.cover -%}
+        <div class="book__cover">
+          <img src="{{ page.cover }}" alt="{{ page.title }} cover">
+        </div>
+        {%- endif -%}
+          <div class="book__info">
+            <h1 itemprop="headline">{{ page.title }}</h1>
+            {%- if page.book_author -%}
+              <p class="book__author">by {{ page.book_author }}</p>
+            {%- endif -%}
+          {%- if page.rating or page.date -%}
+          <div class="book__meta">
+            {%- if page.rating -%}
+              <span class="book__rating" aria-label="Rating: {{ page.rating }} out of 5">
+                {%- assign _rating_full = page.rating | floor -%}
+                {%- assign _rating_decimal = page.rating | minus: _rating_full -%}
+                {%- for i in (1..5) -%}
+                  {%- if i <= _rating_full -%}<span class="star-full">★</span>{%- elsif i == _rating_full | plus: 1 and _rating_decimal >= 0.5 -%}<span class="star-half">★</span>{%- else -%}<span class="star-empty">☆</span>{%- endif -%}
+                {%- endfor -%}
+              </span>
+            {%- endif -%}
+            {%- if page.date -%}
+              {%- if page.rating -%}<span class="split-space"> • </span>{%- endif -%}
+              <span class="book__date">{{ page.date | date: '%B %Y' }}</span>
+            {%- endif -%}
+          </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+
+    <div class="article__content" itemprop="articleBody">
+      {%- if page.summary -%}
+        <div class="book__summary">
+          <h2>Summary</h2>
+          {{ page.summary | markdownify }}
+        </div>
+      {%- endif -%}
+
+      <div class="book__notes">
+        <h2>My Notes</h2>
+        {{ content }}
+      </div>
+
+      {%- if page.quotes -%}
+        <div class="book__quotes">
+          <h2>Favorite Quotes</h2>
+          {%- for q in page.quotes -%}
+            <blockquote>{{ q }}</blockquote>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- if page.takeaways -%}
+        <div class="book__takeaways">
+          <h2>Key Takeaways</h2>
+          <ul>
+            {%- for t in page.takeaways -%}
+              <li>{{ t }}</li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+    </div>
+  </article>
+</div>
