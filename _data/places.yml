@@ -1,0 +1,234 @@
+- title: "San Francisco, USA"
+  longitude: -122.4194
+  latitude: 37.7749
+  type: "visited"
+
+- title: "New York, USA"
+  longitude: -73.935242
+  latitude: 40.730610
+  type: "visited"
+
+- title: "上海"
+  longitude: 121.4737
+  latitude: 31.2304
+  type: "visited"
+
+- title: "Rome, Italy"
+  longitude: 12.4964
+  latitude: 41.9028
+  type: "visited"
+
+- title: "Zurich, Switzerland"
+  longitude: 8.5417
+  latitude: 47.3769
+  type: "visited"
+
+- title: "北京"
+  longitude: 116.4074
+  latitude: 39.9042
+  type: "visited"
+
+- title: "南京"
+  longitude: 118.7966
+  latitude: 32.0602
+  type: "visited"
+
+- title: "Cancún, Mexico"
+  longitude: -86.8466
+  latitude: 21.1619
+  type: "visited"
+
+- title: "Florence, Italy"
+  longitude: 11.2558
+  latitude: 43.7696
+  type: "visited"
+
+- title: "Honolulu, USA"
+  longitude: -157.8583
+  latitude: 21.3069
+  type: "visited"
+
+- title: "Cusco, Peru"
+  longitude: -71.9667
+  latitude: -13.5000
+  type: "visited"
+
+- title: "Lima, Peru"
+  longitude: -77.0428
+  latitude: -12.0464
+  type: "visited"
+
+- title: "Boston, USA"
+  longitude: -71.0571
+  latitude: 42.3611
+  type: "visited"
+
+- title: "Atlanta, USA"
+  longitude: -84.3903
+  latitude: 33.7490
+  type: "visited"
+
+- title: "Washington, USA"
+  longitude: -77.0369
+  latitude: 38.8936
+  type: "visited"
+
+- title: "Los Angeles, USA"
+  longitude: -118.2437
+  latitude: 34.0522
+  type: "visited"
+
+- title: "Miami, USA"
+  longitude: -80.1918
+  latitude: 25.7617
+  type: "visited"
+
+- title: "Orlando, USA"
+  longitude: -81.3792
+  latitude: 28.5383
+  type: "visited"
+
+- title: "Austin, USA"
+  longitude: -97.7431
+  latitude: 30.2672
+  type: "visited"
+
+- title: "Houston, USA"
+  longitude: -95.3698
+  latitude: 29.7604
+  type: "visited"
+
+- title: "St. Louis, USA"
+  longitude: -90.1994
+  latitude: 38.6270
+  type: "visited"
+
+- title: "Chicago, USA"
+  longitude: -87.6298
+  latitude: 41.8781
+  type: "visited"
+
+- title: "Detroit, USA"
+  longitude: -83.0457
+  latitude: 42.3314
+  type: "visited"
+
+- title: "Columbus, USA"
+  longitude: -82.9987
+  latitude: 39.9612
+  type: "visited"
+
+- title: "Toronto, Canada"
+  longitude: -79.3871
+  latitude: 43.6510
+  type: "visited"
+
+- title: "Vancouver, Canada"
+  longitude: -123.1207
+  latitude: 49.2827
+  type: "visited"
+
+- title: "Nassau, Bahamas"
+  longitude: -77.3963
+  latitude: 25.0721
+  type: "visited"
+
+- title: "Key West, USA"
+  longitude: -81.7774
+  latitude: 24.5556
+  type: "visited"
+
+- title: "San Juan, Puerto Rico"
+  longitude: -66.1057
+  latitude: 18.4663
+  type: "visited"
+
+- title: "石家庄"
+  longitude: 114.4825
+  latitude: 38.0416
+  type: "visited"
+
+- title: "合肥"
+  longitude: 117.2830
+  latitude: 31.8612
+  type: "visited"
+
+- title: "芜湖"
+  longitude: 118.3768
+  latitude: 31.3293
+  type: "visited"
+
+- title: "成都"
+  longitude: 104.0668
+  latitude: 30.6595
+  type: "visited"
+
+- title: "Salt Lake City, USA"
+  longitude: -111.8910
+  latitude: 40.7608
+  type: "visited"
+
+- title: "Denver, USA"
+  longitude: -104.9903
+  latitude: 39.7392
+  type: "visited"
+
+- title: "Las Vegas, USA"
+  longitude: -115.1398
+  latitude: 36.1699
+  type: "visited"
+
+- title: "Yellowstone National Park, USA"
+  longitude: -110.5885
+  latitude: 44.6859
+  type: "visited"
+
+- title: "Grand Canyon, USA"
+  longitude: -112.1130
+  latitude: 36.1069
+  type: "visited"
+  
+- title: "Wichita, USA"
+  longitude: -97.3301
+  latitude: 37.6872
+  type: "visited"
+
+- title: "Indianapolis, USA"
+  longitude: -86.1581
+  latitude: 39.7684
+  type: "visited"
+
+- title: "Nashville, USA"
+  longitude: -86.7816
+  latitude: 36.1627
+  type: "visited"
+
+- title: "Rocky Mountains, USA"
+  longitude: -106.0381
+  latitude: 39.1130
+  type: "visited"
+
+- title: "Amherst, USA"
+  longitude: -72.5211
+  latitude: 42.3712
+  type: "visited"
+
+- title: "Milan, Italy"
+  longitude: 9.1914
+  latitude: 45.4642
+  type: "visited"
+
+- title: "Venice, Italy"
+  longitude: 12.3324
+  latitude: 45.4414
+  type: "visited"
+
+- title: "Iowa City, USA"
+  longitude: -91.5300
+  latitude: 41.6611
+  type: "visited"
+
+- title: "Vatican City"
+  longitude: 12.4534
+  latitude: 41.9033
+  type: "visited"
