@@ -8,13 +8,13 @@ layout: page
     {{ content }}
   </div>
   {%- endif -%}
-  
+
   <section class="map-section">
     <h2 class="section-title">Places I've Been</h2>
-    <div style="position: relative;">
-      <div id="chartdiv" style="width: 100%; height: 600px; touch-action: manipulation;"></div>
-      <button id="homeButton" class="home-button" title="Return to home view">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <div class="map-wrapper">
+      <div id="chartdiv"></div>
+      <button id="homeButton" class="home-button" title="Reset map view">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
           <polyline points="9 22 9 12 15 12 15 22"></polyline>
         </svg>
@@ -23,103 +23,112 @@ layout: page
   </section>
 </div>
 
-<!-- Resources -->
+<!-- amCharts Resources -->
 <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
 <script>
-// Create root element
-am5.ready(function() {
-  var root = am5.Root.new("chartdiv");
+  am5.ready(function() {
+    // Create root
+    var root = am5.Root.new("chartdiv");
 
-  // Set themes
-  root.setThemes([
-    am5themes_Animated.new(root)
-  ]);
+    // Set themes
+    root.setThemes([am5themes_Animated.new(root)]);
 
-  // Create the map chart
-  var chart = root.container.children.push(am5map.MapChart.new(root, {
-    panX: "rotateX",
-    panY: "translateY",
-    projection: am5map.geoMercator(),
-    homeZoomLevel: 1.4,
-    homeGeoPoint: { longitude: 0, latitude: 20 },
-    wheelY: "zoom",
-    wheelX: "none",
-    pinchZoom: true
-  }));
+    // Create map chart
+    var chart = root.container.children.push(
+      am5map.MapChart.new(root, {
+        panX: "rotateX",
+        panY: "translateY",
+        projection: am5map.geoMercator(),
+        homeZoomLevel: 1.4,
+        homeGeoPoint: { longitude: 0, latitude: 20 }
+      })
+    );
 
-  // Create main polygon series for countries
-  var polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
-    geoJSON: am5geodata_worldLow,
-    exclude: ["AQ"]
-  }));
+    // Create polygon series (countries)
+    var polygonSeries = chart.series.push(
+      am5map.MapPolygonSeries.new(root, {
+        geoJSON: am5geodata_worldLow,
+        exclude: ["AQ"]
+      })
+    );
 
-  polygonSeries.mapPolygons.template.setAll({
-    tooltipText: "{name}",
-    toggleKey: "active",
-    interactive: true,
-    fill: am5.color(0xe0e0e0),
-    strokeWidth: 0.5
-  });
-
-  polygonSeries.mapPolygons.template.states.create("hover", {
-    fill: am5.color(0xaaaaaa)
-  });
-
-  // Create point series for markers
-  var pointSeries = chart.series.push(am5map.MapPointSeries.new(root, {}));
-
-  pointSeries.bullets.push(function(root, series, dataItem) {
-    var placeType = dataItem.dataContext.placeType;
-    var color = placeType === "home" ? am5.color(0x5cb85c) : am5.color(0xff6b6b);
-    
-    var circle = am5.Circle.new(root, {
-      radius: 6,
-      tooltipY: 0,
-      fill: color,
-      stroke: root.interfaceColors.get("background"),
-      strokeWidth: 2,
-      tooltipText: "{title}"
+    polygonSeries.mapPolygons.template.setAll({
+      tooltipText: "{name}",
+      fill: am5.color(0xe0e0e0),
+      strokeWidth: 0.5,
+      stroke: am5.color(0xffffff)
     });
 
-    circle.states.create("hover", {
-      radius: 8,
-      scale: 1.2
+    polygonSeries.mapPolygons.template.states.create("hover", {
+      fill: am5.color(0xaaaaaa)
     });
 
-    return am5.Bullet.new(root, {
-      sprite: circle
+    // Create point series for markers
+    var pointSeries = chart.series.push(am5map.MapPointSeries.new(root, {}));
+
+    pointSeries.bullets.push(function(root, series, dataItem) {
+      var placeType = dataItem.dataContext.placeType;
+      var color = placeType === "home"
+        ? am5.color(0x5cb85c)
+        : am5.color(0xff6b6b);
+
+      var circle = am5.Circle.new(root, {
+        radius: 6,
+        tooltipY: 0,
+        fill: color,
+        stroke: root.interfaceColors.get("background"),
+        strokeWidth: 2,
+        tooltipText: "{title}"
+      });
+
+      circle.states.create("hover", {
+        radius: 8,
+        scale: 1.2
+      });
+
+      return am5.Bullet.new(root, { sprite: circle });
     });
-  });
 
-  // Load places from data file
-  var places = {{ site.data.places | jsonify }};
-  
-  var cities = places.map(function(place) {
-    return {
-      geometry: { 
-        type: "Point", 
-        coordinates: [place.longitude, place.latitude] 
-      },
-      title: place.title,
-      placeType: place.type
-    };
-  });
+    // Load places data
+    var places = {{ site.data.places | jsonify }};
 
-  pointSeries.data.setAll(cities);
+    var cities = places.map(function(place) {
+      return {
+        geometry: {
+          type: "Point",
+          coordinates: [place.longitude, place.latitude]
+        },
+        title: place.title,
+        placeType: place.type
+      };
+    });
 
-  // Make stuff animate on load
-  chart.appear(1000, 100);
+    pointSeries.data.setAll(cities);
 
-  // Home button functionality
-  document.getElementById('homeButton').addEventListener('click', function() {
-    chart.goHome();
-  });
+    // Animate on load
+    chart.appear(1000, 100);
 
-}); // end am5.ready()
+    // Home button
+    document.getElementById('homeButton').addEventListener('click', function() {
+      chart.goHome();
+    });
+
+    // Prevent scroll events from bubbling
+    var chartDiv = document.getElementById('chartdiv');
+
+    chartDiv.addEventListener('wheel', function(e) {
+      e.stopPropagation();
+    }, { passive: true });
+
+    chartDiv.addEventListener('touchmove', function(e) {
+      e.stopPropagation();
+    }, { passive: false });
+
+  }); // end am5.ready()
 </script>
 
 <style>
@@ -152,13 +161,54 @@ am5.ready(function() {
   font-weight: 600;
 }
 
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
 #chartdiv {
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
-/* Hide amCharts watermark from all positions */
+.home-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-button svg {
+  color: #555;
+  display: block;
+}
+
+.home-button:hover {
+  background: #f8f8f8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.home-button:active {
+  transform: scale(0.95);
+}
+
+/* Hide amCharts branding */
 #chartdiv a[title*="JavaScript charts"],
 #chartdiv a[title*="amCharts"],
 #chartdiv .am5-logo,
@@ -168,49 +218,26 @@ a[aria-label*="Chart created using amCharts"] {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
-  width: 0 !important;
-  height: 0 !important;
-}
-
-.home-button {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 8px 10px;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.home-button svg {
-  color: #666;
-  display: block;
-}
-
-.home-button:hover {
-  background: #f5f5f5;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.home-button:active {
-  transform: scale(0.95);
 }
 
 @media (max-width: 768px) {
-  #chartdiv {
-    height: 400px !important;
+  .map-wrapper {
+    height: 400px;
   }
-  
+
   .section-title {
     font-size: 1.5rem;
   }
+
+  .extras-intro {
+    margin: 0 auto 2rem auto;
+    font-size: 1rem;
+  }
+
+  .home-button {
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 10px;
+  }
 }
 </style>
-
