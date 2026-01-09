@@ -54,6 +54,9 @@ collections:
   books:
     output: true
     permalink: /reading/:title/
+  ml_journal:
+    output: true
+    permalink: /ml-journey/:title/
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################

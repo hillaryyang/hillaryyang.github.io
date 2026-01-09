@@ -10,7 +10,7 @@ layout: page
     {{ content }}
   </div>
   {%- endif -%}
-  
+
   <section class="goodreads-container">
     <h2 class="section-title">Currently Reading</h2>
     <div id="goodreads-current-recent"></div>
@@ -40,14 +40,14 @@ layout: page
         "{{ cover[0] }}": "{{ cover[1] }}"{%- unless forloop.last -%},{%- endunless -%}
       {%- endfor -%}
     };
-    
+
     // Manual rating overrides from _data/book_ratings.yml
     const manualRatings = {
       {%- for rating in site.data.book_ratings -%}
         "{{ rating[0] }}": {{ rating[1] }}{%- unless forloop.last -%},{%- endunless -%}
       {%- endfor -%}
     };
-    
+
     // Currently Reading widget
     const currentRecentWidget = new GoodreadsWidget({
       userId: '176820268',
@@ -59,7 +59,7 @@ layout: page
       showRatings: false
     });
     currentRecentWidget.init();
-    
+
     // Favorites widget
     const favoritesWidget = new GoodreadsWidget({
       userId: '176820268',
@@ -70,7 +70,7 @@ layout: page
       manualRatings: manualRatings
     });
     favoritesWidget.init();
-    
+
     // Least Favorites widget - from 'bad' shelf
     const leastFavoritesWidget = new GoodreadsWidget({
       userId: '176820268',
@@ -95,7 +95,7 @@ layout: page
 
 .reading-intro {
   max-width: 800px;
-  margin: 0 auto 3rem auto;
+  margin: 0 auto 2rem auto;
   text-align: center;
   font-size: 1.1rem;
   line-height: 1.6;

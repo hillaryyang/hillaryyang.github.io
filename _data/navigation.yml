@@ -5,6 +5,8 @@ header:
     url: /blog/
   - title: "Projects"
     url: /projects/
+  - title: "ML Journey"
+    url: /ml-journey/
   - title: "Reading"
     url: /reading/
   - title: "Extras"

@@ -1,0 +1,4 @@
+# Manual cover URL overrides for Goodreads books
+# Format: "Book Title": "https://path/to/cover/image.jpg"
+# Use this if Goodreads cover images aren't displaying correctly
+
