@@ -1,0 +1,164 @@
+---
+layout: page
+show_title: false
+article_header: false
+aside:
+  toc: false
+show_edit_on_github: false
+show_subscribe: false
+author: false
+show_author_profile: false
+show_date: false
+---
+
+<div class="layout--crossword">
+  <article itemscope itemtype="http://schema.org/Article">
+    <div class="crossword__back">
+      <a href="/crosswords/">← Back to Crosswords</a>
+    </div>
+
+    <div class="crossword__header">
+      <h1 itemprop="headline">{{ page.title }}</h1>
+
+      <div class="crossword__meta">
+        {%- if page.date -%}
+        <span class="crossword__date">{{ page.date | date: '%B %Y' }}</span>
+        {%- endif -%}
+
+        {%- if page.puzzle_link -%}
+        <a href="{{ page.puzzle_link }}" target="_blank" rel="noopener noreferrer" class="crossword__play-button">
+          Try it out! →
+        </a>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="article__content" itemprop="articleBody">
+      {{ content }}
+    </div>
+  </article>
+</div>
+
+<style>
+/* Individual crossword page layout */
+.layout--crossword {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.crossword__back {
+  margin-bottom: 2rem;
+}
+
+.crossword__back a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.crossword__back a:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+
+.crossword__header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.crossword__header h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.crossword__meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.crossword__date {
+  color: #888;
+  font-size: 1rem;
+}
+
+.crossword__play-button {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.crossword__play-button:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+
+.article__content {
+  line-height: 1.8;
+}
+
+.article__content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: #333;
+}
+
+.article__content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  color: #444;
+}
+
+.article__content p {
+  margin-bottom: 1rem;
+}
+
+.article__content ul, .article__content ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.article__content li {
+  margin-bottom: 0.5rem;
+}
+
+.article__content blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  background: #f8f9fa;
+  border-left: 4px solid #0066cc;
+  font-style: italic;
+}
+
+.article__content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .layout--crossword {
+    padding: 1rem 0.5rem;
+  }
+
+  .crossword__header h1 {
+    font-size: 1.75rem;
+  }
+
+  .crossword__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+</style>

@@ -57,6 +57,9 @@ collections:
   ml_journal:
     output: true
     permalink: /ml-journey/:title/
+  crosswords:
+    output: true
+    permalink: /crosswords/:title/
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
