@@ -1,6 +1,6 @@
 ---
 layout: ml-journey
-title: ML Journey
+title: ML
 permalink: /ml-journey/
 ---
 

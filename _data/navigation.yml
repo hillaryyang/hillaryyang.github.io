@@ -1,13 +1,15 @@
 header:
   - title: "About"
     url: /
-  - title: "Blog"
-    url: /blog/
   - title: "Projects"
     url: /projects/
-  - title: "ML Journey"
-    url: /ml-journey/
+  # - title: "ML Journey"
+  #   url: /ml-journey/
+  - title: "Crosswords"
+    url: /crosswords/
   - title: "Reading"
     url: /reading/
   - title: "Extras"
     url: /extras/
+  - title: "Writing"
+    url: /writing/

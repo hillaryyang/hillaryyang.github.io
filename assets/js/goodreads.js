@@ -16,15 +16,15 @@ class GoodreadsWidget {
     this.rssUrl = `https://www.goodreads.com/review/list_rss/${this.userId}?shelf=${this.shelf}`;
 
     // Use a CORS proxy for RSS feed
-    this.corsProxy = 'https://api.allorigins.win/raw?url=';
+    this.corsProxy = 'https://corsproxy.io/?';
 
     // Cache settings (1 hour cache)
     this.cacheKey = `goodreads_${this.userId}_${this.shelf}`;
     this.cacheDuration = 60 * 60 * 1000; // 1 hour in milliseconds
 
     // Request settings
-    this.timeout = 10000; // 10 second timeout
-    this.maxRetries = 2;
+    this.timeout = 15000; // 15 second timeout
+    this.maxRetries = 3;
   }
 
   // Fetch with timeout
