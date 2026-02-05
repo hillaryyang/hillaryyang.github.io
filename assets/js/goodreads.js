@@ -16,7 +16,7 @@ class GoodreadsWidget {
     this.rssUrl = `https://www.goodreads.com/review/list_rss/${this.userId}?shelf=${this.shelf}`;
 
     // Use a CORS proxy for RSS feed
-    this.corsProxy = 'https://corsproxy.io/?';
+    this.corsProxy = 'https://api.allorigins.win/raw?url=';
 
     // Cache settings (1 hour cache)
     this.cacheKey = `goodreads_${this.userId}_${this.shelf}`;
@@ -404,9 +404,12 @@ class GoodreadsWidget {
     }
 
     try {
+      console.log(`[GoodreadsWidget] Fetching books from shelf: ${this.shelf}`);
       const books = await this.fetchBooks();
+      console.log(`[GoodreadsWidget] Successfully loaded ${books.length} books from shelf: ${this.shelf}`);
       this.renderBooks(books);
     } catch (error) {
+      console.error(`[GoodreadsWidget] Error loading shelf ${this.shelf}:`, error);
       this.renderBooks([], error);
     }
   }
