@@ -17,16 +17,14 @@ Filling was quite rough with my Frankenstein-ed wordlists (I just downloaded eve
 
 ## Favorite Clues
 
-Like knives that are safest to use, counterintuitively - **SHARP**: I'm honestly still not sure if this is the correct tense (safe? safest? safer?) but I thought this was a pretty nice clue.
+1A. [Like knives that are safest to use, counterintuitively] is **SHARP**. I'm honestly still not sure if this is the correct tense (safe? safest? safer?) but I thought this was a pretty nice clue.
 
-2025 Bad Bunny hit, for short - **DTMF**: Just because I love this song :)
+2A. [2025 Bad Bunny hit, for short] is a tribute to a song I really love, **DTMF**!
 
-Images with extra fingers, often - **AIART**: More modern words! Yay!
+22A. [Images with extra fingers, often] is **AIART**. More modern words! Yay!
 
-Sin complementer? - **COS**: This was my first shot at wordplay and honestly I can't say if it even works. But yeah, these trig functions (COS/SIN/TAN) really get great treatment in the crossword world, and I'm here for it!
+32A. My first shot at wordplay was [Sin complementer?] which is **COS**. These trig functions (COS/SIN/TAN) really get great treatment in the crossword world, and I'm here for it!
 
-Programmer's version control system - **GIT**: Much better than "get out," in my humble opinion
+34D. [Fit to fly, in "Catch-22"] solves to **SANE**. I'm honestly also not too sure how valid this is because I'm pretty sure it's unfit to fly = insane...
 
-Fit to fly, in "Catch-22" - **SANE**: I'm honestly also not too sure how valid this is because I'm pretty sure it's unfit to fly = insane...
-
-"The Shawshank Redemption" narrator, familiarly - **RED**: Also just because I love this movie
+37D. ["The Shawshank Redemption" narrator, familiarly] is our beloved **RED**. Also just because I love this movie.

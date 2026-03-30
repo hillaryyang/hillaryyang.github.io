@@ -23,12 +23,6 @@ layout: page
     <div id="goodreads-favorites"></div>
   </section>
   
-  <hr class="goodreads-divider">
-  
-  <section class="goodreads-container">
-    <h2 class="section-title">Not-So-Great Reads</h2>
-    <div id="goodreads-least-favorites"></div>
-  </section>
 </div>
 
 <script src="/assets/js/goodreads.js"></script>
@@ -72,17 +66,6 @@ layout: page
     });
     favoritesWidget.init();
 
-    // Least Favorites widget - from 'bad' shelf
-    const leastFavoritesWidget = new GoodreadsWidget({
-      userId: '176820268',
-      shelf: 'bad',
-      containerId: 'goodreads-least-favorites',
-      limit: 20,
-      manualCovers: manualCovers,
-      manualRatings: manualRatings,
-      showRatings: false
-    });
-    leastFavoritesWidget.init();
   });
 </script>
 

@@ -1,3 +1,104 @@
 /* start custom scss snippet */
 
+/* ── Dropdown navigation ─────────────────────────────────────────── */
+
+/* Allow the dropdown menu to overflow the nav bar */
+.navigation {
+  overflow: visible !important;
+  & > ul {
+    overflow: visible !important;
+  }
+}
+
+.navigation__dropdown {
+  position: relative;
+}
+
+.navigation__dropdown-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  line-height: inherit;
+}
+
+.navigation__dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 140px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem 0;
+  z-index: 900;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+
+.navigation__dropdown:hover .navigation__dropdown-menu,
+.navigation__dropdown:focus-within .navigation__dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navigation__dropdown-item {
+  a {
+    display: block;
+    padding: 0.45rem 1.1rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: background 0.1s ease, color 0.1s ease;
+
+    &:hover {
+      background: #f5f5f5;
+      color: #0066cc;
+    }
+  }
+}
+
+.navigation__dropdown-item--active a {
+  color: #0066cc;
+  font-weight: 600;
+}
+
+/* ── Mobile ──────────────────────────────────────────────────────── */
+
+@media (max-width: 499px) {
+  .navigation__dropdown-menu {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .navigation__dropdown-item a {
+    padding: 0 0.6rem;
+  }
+
+  .navigation__dropdown-toggle {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.7;
+  }
+}
+
 /* end custom scss snippet */

@@ -1,8 +1,6 @@
 ---
 layout: projects
-title: Projects
-permalink: /projects/
+title: Interests
+permalink: /interests/
 ---
-
-Here are some various projects I've been working on!
 

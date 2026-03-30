@@ -3,53 +3,48 @@ layout: page
 ---
 
 <div class="layout--projects">
-  {%- if content != "" -%}
-  <div class="projects-intro">
-    {{ content }}
-  </div>
-  {%- endif -%}
-  
   <section class="projects-grid">
-      <!-- Research Projects -->
-      <div class="project-card">
-        <h3 class="project-title">Rubik's Cube Scrambling Number</h3>
-        <p class="project-description">We proved the first non-trivial bound on the Rubik's cube scrambling number, showing that at least 26 random moves are required to sufficiently scramble a solved cube.</p>
+
+    <div class="project-card">
+      <a href="https://arxiv.org/abs/2410.20630" target="_blank" class="project-card-link">
+        <h3 class="project-title">Cubing</h3>
+        <p class="project-description">We proved the first non-trivial lower bound on the Rubik's cube scrambling number!</p>
         <div class="project-tags">
-          <span class="tag">Probability</span>
           <span class="tag">Research</span>
           <span class="tag">Speedcubing</span>
         </div>
-        <a href="https://arxiv.org/abs/2410.20630" target="_blank" class="project-link">Read Paper →</a>
-      </div>
-
-    <!-- Chinese App -->
-    <div class="project-card">
-      <h3 class="project-title">Hanzi Practice</h3>
-      <p class="project-description">An interactive web tool for practicing Chinese character writing on a tablet.</p>
-      <div class="project-tags">
-        <span class="tag">Web App</span>
-        <span class="tag">Chinese Learning</span>
-      </div>
-      <a href="https://hillaryyang.github.io/hanzipractice/" target="_blank" class="project-link">Try it out →</a>
+      </a>
     </div>
+
+    <div class="project-card">
+      <a href="/cs/" class="project-card-link">
+        <h3 class="project-title">Cybersecurity & Data Privacy</h3>
+        <p class="project-description">Research and more!</p>
+        <div class="project-tags">
+          <span class="tag">Research</span>
+          <span class="tag">Data Privacy</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="project-card">
+      <a href="/crosswords/" class="project-card-link">
+        <h3 class="project-title">Crosswords</h3>
+        <p class="project-description">Crossword puzzles I've constructed.</p>
+        <div class="project-tags">
+          <span class="tag">Puzzles</span>
+        </div>
+      </a>
+    </div>
+
   </section>
 </div>
 
 <style>
-/* Projects page layout */
 .layout--projects {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
-}
-
-.projects-intro {
-  max-width: 800px;
-  margin: 0 auto 3rem auto;
-  text-align: center;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #666;
 }
 
 .projects-grid {
@@ -69,13 +64,19 @@ layout: page
   background: #fff;
   border: 1px solid #e5e5e5;
   border-radius: 8px;
-  padding: 1.5rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-card-link {
+  display: block;
+  padding: 1.5rem;
+  text-decoration: none !important;
+  color: inherit;
 }
 
 .project-title {
@@ -89,13 +90,13 @@ layout: page
   margin-bottom: 1rem;
   line-height: 1.6;
   color: #666;
+  font-weight: normal;
 }
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1rem;
 }
 
 .tag {
@@ -106,18 +107,4 @@ layout: page
   font-size: 0.85rem;
   color: #555;
 }
-
-.project-link {
-  display: inline-block;
-  color: #0066cc;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.project-link:hover {
-  color: #004499;
-  text-decoration: underline;
-}
 </style>
-
