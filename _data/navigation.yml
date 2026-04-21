@@ -1,7 +1,5 @@
 header:
   - title: "About"
-    url: /
-  - title: "Interests"
-    url: /interests/
-  - title: "CV"
-    url: /assets/hillary-yang-resume.pdf
+    url: /about/
+  - title: "Reading"
+    url: "/reading/"
