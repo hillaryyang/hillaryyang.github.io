@@ -12,9 +12,10 @@
 </script>
 
 <template>
-    <section id="about" class="min-h-screen flex flex-col justify-center items-end px-6 gap-6">
+    <section id="about" class="flex flex-col justify-center items-end px-6 gap-6">
         <div class="flex flex-col items-end">
-            <h1 style="font-family: 'Newsreader', sans-serif;" class="text-6xl font-bold">
+            <h1 style="font-family: 'Newsreader', sans-serif; background: linear-gradient(to right, #ff6b6b, #ff8c5a, #ffa94d, #ffc84d, #ffe066, #a8e06a,
+   #69db7c, #4dc9a0, #4dabf7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" class="text-6xl font-bold">
                 {{ firstName }}
             </h1>
             <h2 style="font-family: 'Newsreader', sans-serif;" class="text-6xl font-bold">
