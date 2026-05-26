@@ -89,7 +89,15 @@
                         <p>5D: Your favorite club!</p>
                     </div>
                 </div>
-                <div class="rounded-xl interest-card bg-white" style="">composing</div>
+                <!--COMPOSING CARD-->
+                <div class="rounded-xl interest-card bg-white h-full relative p-3 flex flex-col">
+                    <span style="font-family: 'Yesteryear', sans-serif;" class="text-4xl ml-3 mb-4">composing</span>
+                    <a href="google.com" target="_blank" class="rounded-lg bg-gray-50 p-4 flex flex-col gap-1 hover:shadow-md transition-shadow cursor-pointer">
+                        <span style="font-family: 'Basic', sans-serif;" class="text-sm font-bold">Title here</span>
+                        <span style="font-family: 'Basic', sans-serif;" class="text-xs text-gray-400">May 2026</span>
+                        <span style="font-family: 'Basic', sans-serif;" class="text-xs text-gray-600">Snippet goes here</span>
+                    </a>
+                </div>
                 <div class="rounded-xl interest-card bg-white" style="">consuming</div>
             </div>
         </div>
