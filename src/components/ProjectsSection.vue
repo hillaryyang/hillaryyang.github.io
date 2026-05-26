@@ -16,16 +16,19 @@
         <h2 style="font-family: 'Newsreader', sans-serif;" class="text-5xl font-bold mb-8 px-10 text-left w-full">Currently...</h2>
 
         <div class="interests-grid w-full overflow-x-auto">
+            <!--TOP ROW OF INTERESTS-->
             <div class="interests-grid-top w-full mb-10">
+                <!--CUBING CARD-->
                 <div class="rounded-xl interest-card bg-white relative overflow-hidden p-4 pt-2 flex flex-col justify-between text-center">
                     <span style="font-family: 'Notable', sans-serif;" class="text-2xl mb-2">cubing</span>
-                    <div>
+                    <div class="p-1 border border-black self-center mt-1 mb-1">
                         <img src="/src/assets/cubes.jpg" class="w-full object-cover">
                     </div>
-                    <p style="font-family: 'Basic', sans-serif;" class="text-sm text-gray-500 text-center pt-2 pb-2">My ever-growing puzzle collection</p>
+                    <p style="font-family: 'Basic', sans-serif;" class="text-sm text-center pt-1">My ever-growing puzzle collection</p>
                 </div>
-
-                <div class="rounded-xl interest-card bg-white relative overflow-hidden p-4 pt-3 flex flex-col justify-between">
+                
+                <!--RESEARCH CARD-->
+                <div class="rounded-xl interest-card bg-white relative overflow-hidden p-4 pt-3 flex flex-col justify-between text-center">
                     <span style="font-family: 'Gelasio', sans-serif;" class="text-2xl">(c)Researching</span>
                     <div class="flex gap-3">
                         <a href="https://arxiv.org/abs/2410.20630" target="_blank" class="paper-card rounded-lg flex-1 h-45" style="">
@@ -50,10 +53,42 @@
                         </a>
                     </div>
                 </div>
-                <div class=" rounded-xl interest-card bg-white" style="">cooking</div>
+
+                <!--COOKING CARD-->
+                <div class=" rounded-xl interest-card bg-white relative p-4 pt-3 flex flex-col text-center">
+                    <span style="font-family: 'Pinyon Script', sans-serif;" class="text-3xl">cooking</span>
+                    <div class="p-1 border border-black self-center mt-1 mb-1">
+                        <img src="/src/assets/food.jpg" class="object-contain max-h-35 block rounded-xl">
+                    </div>                    
+                <a style="font-family:'Basic', sans-serif;" class="text-center block text-xs">Chinese braised tofu</a>
+                </div>
             </div>
+            
+            <!--BOTTOM ROW OF INTERESTS-->
             <div class="interests-grid-bottom w-full">
-                <div class="rounded-xl interest-card bg-white" style="">crosswording</div>
+                <!--CROSSWORDING CARD-->
+                <div class="rounded-xl interest-card bg-white h-full relative">
+                    <span style="font-family: 'Fascinate Inline', sans-serif;" class="absolute bottom-4 right-4 text-2xl">crosswording</span>
+                    <img src="/src/assets/xword.png" class="absolute left-6 bottom-10 h-3/4 object-contain">
+
+                    <div class="absolute top-5 right-20 max-w-48 text-[0.6rem]" style="font-family: 'Basic', sans-serif;">
+                        <p>Across</p>
+                        <p>1A: Animator Disney</p>
+                        <p>5A: Singing group</p>
+                        <p>6A: bundle exec jekyll ____</p>
+                        <p>7A: Doesn't like at all</p>
+                        <p>8A: Sirius or Polaris</p>
+                    </div>
+
+                    <div class="absolute bottom-12 right-8 max-w-48 text-[0.6rem]" style="font-family: 'Basic', sans-serif;">
+                        <p>Down</p>
+                        <p>1D: Breadmaking ingredient in Minecraft</p>
+                        <p>2D: Major blood vessel</p>
+                        <p>3D: Meat that may be "chopped"</p>
+                        <p>4D: Uno + dos</p>
+                        <p>5D: Your favorite club!</p>
+                    </div>
+                </div>
                 <div class="rounded-xl interest-card bg-white" style="">composing</div>
                 <div class="rounded-xl interest-card bg-white" style="">consuming</div>
             </div>
