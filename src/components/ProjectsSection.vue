@@ -1,14 +1,17 @@
 <script setup lang="ts">
     import { ref } from 'vue'
-    
-    const interests = ref([
-        { name: 'cubing', color: '#e82001', type: 'image', image: 'https://picsum.photos/400/300'},
-        { name: 'crosswording', color: '#65b1e3', type: 'text', preview: '1A: Something clever...'},
-        { name: 'consuming', color: '#f39202', type: 'image', image: 'https://picsum.photos/400/400'},
-        { name: '(c)researching', color: '#52e303', type: 'image', image: 'https://picsum.photos/400/600'},
-        { name: 'cooking', color: '#FFD500', type: 'image', image: 'https://picsum.photos/400/350'},
-        { name: 'composing', color: '#D3D3D3', type: 'text', preview: 'Something will go here...'}
+
+    // media section
+    const currentIndex = ref<number>(0);
+    const media = ref([
+        { title: 'Book1', author: 'Author name', cover: 'https://picsum.photos/100/150', link: '#'},
+        { title: 'Book2', author: 'Author Name', cover: 'https://picsum.photos/100/150', link: '#'},
+        { title: 'Movie title', author: 'Director name', cover: 'https://picsum.photos/100/150', link: '#' },
     ])
+
+    function next() {
+        currentIndex.value = (currentIndex.value + 1) % media.value.length;
+    }
 </script>
 
 <template>
@@ -90,15 +93,34 @@
                     </div>
                 </div>
                 <!--COMPOSING CARD-->
-                <div class="rounded-xl interest-card bg-white h-full relative p-3 flex flex-col">
-                    <span style="font-family: 'Yesteryear', sans-serif;" class="text-4xl ml-3 mb-4">composing</span>
-                    <a href="google.com" target="_blank" class="rounded-lg bg-gray-50 p-4 flex flex-col gap-1 hover:shadow-md transition-shadow cursor-pointer">
-                        <span style="font-family: 'Basic', sans-serif;" class="text-sm font-bold">Title here</span>
+                <div class="rounded-xl interest-card bg-white h-full relative p-4 flex flex-col">
+                    <span style="font-family: 'Yesteryear', sans-serif;" class="text-4xl text-center">composing</span>
+                    <a href="google.com" target="_blank" class="paper-card rounded-lg bg-gray-50 p-4 flex flex-col gap-1 my-auto">
+                        <span style="font-family: 'Basic', sans-serif;" class="text-sm font-bold">The day before the world ended</span>
                         <span style="font-family: 'Basic', sans-serif;" class="text-xs text-gray-400">May 2026</span>
-                        <span style="font-family: 'Basic', sans-serif;" class="text-xs text-gray-600">Snippet goes here</span>
+                        <span style="font-family: 'Basic', sans-serif;" class="text-xs text-gray-500">The day before the world ended,
+                            the sky was a pale, faux pink.
+                            I drove to the neighborhood gas station and bought a blueberry muffin.
+                            Then, on second thought,
+                            a pack of cigarettes and a lottery ticket.
+                        </span>
                     </a>
                 </div>
-                <div class="rounded-xl interest-card bg-white" style="">consuming</div>
+
+                <!--CONSUMING CARD-->
+                <div class="rounded-xl interest-card bg-white h-full relative p-3 flex flex-col">
+                    <a :href="media[currentIndex].link" target="_blank" class="paper-card">
+                        <div class="flex flex-row items-center gap-4 p-3">
+                            <img :src="media[currentIndex].cover" class="h-40 object-cover rounded">
+                            <div>
+                                <p style="font-family:'Basic', sans-serif;">{{ media[currentIndex].title }}</p>
+                                <p style="font-family:'Basic'" class="text-gray-400"> {{ media[currentIndex].author }}</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <span style="font-family:'Estedad',sans-serif;" class="text-2xl text-center mt-auto">consuming (media)</span>
+                </div>
             </div>
         </div>
     </section>
@@ -128,7 +150,6 @@
 }
 
 .paper-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 4px rgba(0,0,0,0.11);
 }
 </style>
