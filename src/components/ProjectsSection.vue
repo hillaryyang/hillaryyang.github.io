@@ -4,10 +4,10 @@
     // media section
     const currentIndex = ref<number>(0);
     const media = ref([
-        { title: 'Flowers for Algernon', author: 'Daniel Keyes', cover: 'src/assets/ffa.jpg', link: 'https://www.goodreads.com/book/show/18373.Flowers_for_Algernon'},
-        { title: 'Animal Liberation', author: 'Peter Singer', cover: 'src/assets/al.jpg', link: 'https://www.goodreads.com/book/show/29380.Animal_Liberation'},
-        { title: 'The Shawshank Redemption', author: 'Frank Darabont', cover: 'src/assets/sr.jpeg', link: 'https://www.imdb.com/title/tt0111161/'},
-        { title: 'Ne Zha 2', author: 'Jiaozi', cover: 'src/assets/nz.webp', link: 'https://www.imdb.com/title/tt34956443/'}
+        { title: 'Flowers for Algernon', author: 'Daniel Keyes', cover: '/ffa.jpg', link: 'https://www.goodreads.com/book/show/18373.Flowers_for_Algernon'},
+        { title: 'Animal Liberation', author: 'Peter Singer', cover: '/al.jpg', link: 'https://www.goodreads.com/book/show/29380.Animal_Liberation'},
+        { title: 'The Shawshank Redemption', author: 'Frank Darabont', cover: '/sr.jpeg', link: 'https://www.imdb.com/title/tt0111161/'},
+        { title: 'Ne Zha 2', author: 'Jiaozi', cover: '/nz.webp', link: 'https://www.imdb.com/title/tt34956443/'}
     ])
 
     function next() {
