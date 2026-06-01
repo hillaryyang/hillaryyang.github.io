@@ -30,7 +30,7 @@
                 <div style="background-color: #FFE8E8" class="rounded-xl interest-card relative overflow-hidden p-4 pt-2 flex flex-col justify-between text-center">
                     <span style="font-family: 'Notable', sans-serif;" class="text-2xl">cubing</span>
                     <!--<div class="p-1 border border-black self-center mt-1 mb-1"></div>-->
-                        <img src="/src/assets/cubes.jpg" class="w-full object-cover">
+                        <img src="@/assets/cubes.jpg" class="w-full object-cover">
                     <p style="font-family: 'Basic', sans-serif;" class="text-sm text-center pt-1">My ever-growing puzzle collection</p>
                 </div>
                 
@@ -40,7 +40,7 @@
                     <div class="flex gap-3">
                         <a href="https://arxiv.org/abs/2410.20630" target="_blank" class="paper-card rounded-lg flex-1 h-45" style="">
                             <div class="p-2 mt-1">
-                                <img src="/src/assets/tvd.png" class="w-full object-cover">
+                                <img src="@/assets/tvd.png" class="w-full object-cover">
                             </div>
                             <span style="font-family: 'Basic', sans-serif;" class="text-center block text-xs">
                                 Rubik's cube scrambling number
@@ -51,7 +51,7 @@
                         </a>
                         <a href="https://arxiv.org/abs/2412.02578" target="_blank" class="paper-card rounded-lg flex-1 h-45" style="">
                             <div class="p-2 mt-1">
-                                <img src="/src/assets/priv.png" class="w-full object-cover">
+                                <img src="@/assets/priv.png" class="w-full object-cover">
                             </div>
 
                             <span style="font-family: 'Basic', sans-serif;" class="text-center block text-xs">
@@ -66,7 +66,7 @@
                     <span style="font-family: 'Imperial Script', sans-serif;" class="text-4xl">cooking</span>
                     <!--<div class="p-1 border border-black self-center mt-1 mb-1">-->
                     <div class="flex flex-col items-center gap-1">
-                        <img src="/src/assets/food.jpg" class="object-contain max-h-40 block rounded-xl">
+                        <img src="@/assets/food.jpg" class="object-contain max-h-40 block rounded-xl">
                     <a style="font-family:'Basic', sans-serif;" class="text-center text-sm">Chinese braised tofu</a>
   </div>
                 </div>
@@ -77,7 +77,7 @@
                 <!--CROSSWORDING CARD-->
                 <div style="background-color: #FFFBE0" class="rounded-xl interest-card bg-white h-full relative">
                     <span style="font-family: 'Fascinate Inline', sans-serif;" class="absolute bottom-4 right-4 text-2xl">crosswording</span>
-                    <img src="/src/assets/xword.png" class="absolute left-6 bottom-10 h-3/4 object-contain">
+                    <img src="@/assets/xword.png" class="absolute left-6 bottom-10 h-3/4 object-contain">
 
                     <div class="absolute top-5 right-20 max-w-48 text-[0.6rem]" style="font-family: 'Basic', sans-serif;">
                         <p>Across</p>
