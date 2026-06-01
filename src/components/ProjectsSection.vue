@@ -4,34 +4,38 @@
     // media section
     const currentIndex = ref<number>(0);
     const media = ref([
-        { title: 'Book1', author: 'Author name', cover: 'https://picsum.photos/100/150', link: '#'},
-        { title: 'Book2', author: 'Author Name', cover: 'https://picsum.photos/100/150', link: '#'},
-        { title: 'Movie title', author: 'Director name', cover: 'https://picsum.photos/100/150', link: '#' },
+        { title: 'Flowers for Algernon', author: 'Daniel Keyes', cover: 'src/assets/ffa.jpg', link: 'https://www.goodreads.com/book/show/18373.Flowers_for_Algernon'},
+        { title: 'Animal Liberation', author: 'Peter Singer', cover: 'src/assets/al.jpg', link: 'https://www.goodreads.com/book/show/29380.Animal_Liberation'},
+        { title: 'The Shawshank Redemption', author: 'Frank Darabont', cover: 'src/assets/sr.jpeg', link: 'https://www.imdb.com/title/tt0111161/'},
+        { title: 'Ne Zha 2', author: 'Jiaozi', cover: 'src/assets/nz.webp', link: 'https://www.imdb.com/title/tt34956443/'}
     ])
 
     function next() {
         currentIndex.value = (currentIndex.value + 1) % media.value.length;
     }
+
+    function prev() {
+        currentIndex.value = (currentIndex.value - 1 + media.value.length) % media.value.length;
+    }
 </script>
 
 <template>
-    <section id="projects" style="background-color: aliceblue;" class="items-center justify-center pb-16 pt-10">
-        <h2 style="font-family: 'Newsreader', sans-serif;" class="text-5xl font-bold mb-8 px-10 text-left w-full">Currently...</h2>
+    <section id="projects" class="items-center justify-center pb-16 pt-10">
+        <h2 style="font-family: 'Newsreader', sans-serif;" class="text-5xl font-bold mb-10 px-10 text-left w-full">Currently...</h2>
 
         <div class="interests-grid w-full overflow-x-auto">
             <!--TOP ROW OF INTERESTS-->
-            <div class="interests-grid-top w-full mb-10">
+            <div class="interests-grid-top w-full mb-7">
                 <!--CUBING CARD-->
-                <div class="rounded-xl interest-card bg-white relative overflow-hidden p-4 pt-2 flex flex-col justify-between text-center">
-                    <span style="font-family: 'Notable', sans-serif;" class="text-2xl mb-2">cubing</span>
-                    <div class="p-1 border border-black self-center mt-1 mb-1">
+                <div style="background-color: #FFE8E8" class="rounded-xl interest-card relative overflow-hidden p-4 pt-2 flex flex-col justify-between text-center">
+                    <span style="font-family: 'Notable', sans-serif;" class="text-2xl">cubing</span>
+                    <!--<div class="p-1 border border-black self-center mt-1 mb-1"></div>-->
                         <img src="/src/assets/cubes.jpg" class="w-full object-cover">
-                    </div>
                     <p style="font-family: 'Basic', sans-serif;" class="text-sm text-center pt-1">My ever-growing puzzle collection</p>
                 </div>
                 
                 <!--RESEARCH CARD-->
-                <div class="rounded-xl interest-card bg-white relative overflow-hidden p-4 pt-3 flex flex-col justify-between text-center">
+                <div style="background-color: aliceblue;" class="rounded-xl interest-card relative overflow-hidden p-4 pt-3 flex flex-col justify-between text-center">
                     <span style="font-family: 'Gelasio', sans-serif;" class="text-2xl">(c)Researching</span>
                     <div class="flex gap-3">
                         <a href="https://arxiv.org/abs/2410.20630" target="_blank" class="paper-card rounded-lg flex-1 h-45" style="">
@@ -58,19 +62,20 @@
                 </div>
 
                 <!--COOKING CARD-->
-                <div class=" rounded-xl interest-card bg-white relative p-4 pt-3 flex flex-col text-center">
-                    <span style="font-family: 'Pinyon Script', sans-serif;" class="text-3xl">cooking</span>
-                    <div class="p-1 border border-black self-center mt-1 mb-1">
-                        <img src="/src/assets/food.jpg" class="object-contain max-h-35 block rounded-xl">
-                    </div>                    
-                <a style="font-family:'Basic', sans-serif;" class="text-center block text-xs">Chinese braised tofu</a>
+                <div style="background-color: #FFF0E0" class="rounded-xl interest-card bg-white relative p-4 pt-2 justify-between flex flex-col text-center">
+                    <span style="font-family: 'Imperial Script', sans-serif;" class="text-4xl">cooking</span>
+                    <!--<div class="p-1 border border-black self-center mt-1 mb-1">-->
+                    <div class="flex flex-col items-center gap-1">
+                        <img src="/src/assets/food.jpg" class="object-contain max-h-40 block rounded-xl">
+                    <a style="font-family:'Basic', sans-serif;" class="text-center text-sm">Chinese braised tofu</a>
+  </div>
                 </div>
             </div>
             
             <!--BOTTOM ROW OF INTERESTS-->
             <div class="interests-grid-bottom w-full">
                 <!--CROSSWORDING CARD-->
-                <div class="rounded-xl interest-card bg-white h-full relative">
+                <div style="background-color: #FFFBE0" class="rounded-xl interest-card bg-white h-full relative">
                     <span style="font-family: 'Fascinate Inline', sans-serif;" class="absolute bottom-4 right-4 text-2xl">crosswording</span>
                     <img src="/src/assets/xword.png" class="absolute left-6 bottom-10 h-3/4 object-contain">
 
@@ -93,7 +98,7 @@
                     </div>
                 </div>
                 <!--COMPOSING CARD-->
-                <div class="rounded-xl interest-card bg-white h-full relative p-4 flex flex-col">
+                <div style="background-color:#E8F8EE;" class="rounded-xl interest-card bg-white h-full relative p-4 flex flex-col">
                     <span style="font-family: 'Yesteryear', sans-serif;" class="text-4xl text-center">composing</span>
                     <a href="google.com" target="_blank" class="paper-card rounded-lg bg-gray-50 p-4 flex flex-col gap-1 my-auto">
                         <span style="font-family: 'Basic', sans-serif;" class="text-sm font-bold">The day before the world ended</span>
@@ -108,17 +113,20 @@
                 </div>
 
                 <!--CONSUMING CARD-->
-                <div class="rounded-xl interest-card bg-white h-full relative p-3 flex flex-col">
-                    <a :href="media[currentIndex].link" target="_blank" class="paper-card">
-                        <div class="flex flex-row items-center gap-4 p-3">
-                            <img :src="media[currentIndex].cover" class="h-40 object-cover rounded">
-                            <div>
-                                <p style="font-family:'Basic', sans-serif;">{{ media[currentIndex].title }}</p>
-                                <p style="font-family:'Basic'" class="text-gray-400"> {{ media[currentIndex].author }}</p>
+                <div style="background-color: #F8F8F8;" class="rounded-xl interest-card bg-white h-full relative p-3 flex flex-col">
+                    <div class="flex gap-4 justify-between">      
+                        <button @click="prev" class="arrow-btn cursor-pointer">‹</button>
+                        <a :href="media[currentIndex].link" target="_blank" class="paper-card">
+                            <div class="flex flex-row items-center gap-4 p-3">
+                                <img :src="media[currentIndex].cover" class="h-40 object-cover rounded">
+                                <div>
+                                    <p style="font-family:'Basic', sans-serif;" class="text-sm mb-1">{{ media[currentIndex].title }}</p>
+                                    <p style="font-family:'Basic'" class="text-gray-400 text-xs"> {{ media[currentIndex].author }}</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                    
+                        </a>
+                        <button @click="next" class="arrow-btn cursor-pointer">›</button>
+                    </div>
                     <span style="font-family:'Estedad',sans-serif;" class="text-2xl text-center mt-auto">consuming (media)</span>
                 </div>
             </div>
@@ -151,5 +159,13 @@
 
 .paper-card:hover {
     box-shadow: 0 4px 4px rgba(0,0,0,0.11);
+}
+
+.arrow-btn {
+    transition:transform 0.1s ease;
+}
+
+.arrow-btn:active {
+    transform: scale(0.85);
 }
 </style>
