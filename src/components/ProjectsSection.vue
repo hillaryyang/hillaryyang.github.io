@@ -9,7 +9,7 @@
         { title: 'The Shawshank Redemption', author: 'Frank Darabont', cover: '/sr.jpeg', link: 'https://www.imdb.com/title/tt0111161/'},
         { title: 'Ne Zha 2', author: 'Jiaozi', cover: '/nz.webp', link: 'https://www.imdb.com/title/tt34956443/'}
     ])
-
+    
     function next() {
         currentIndex.value = (currentIndex.value + 1) % media.value.length;
     }
@@ -23,11 +23,11 @@
     <section id="projects" class="items-center justify-center pb-16 pt-10">
         <h2 style="font-family: 'Newsreader', sans-serif;" class="text-5xl font-bold mb-10 px-10 text-left w-full">Currently...</h2>
 
-        <div class="interests-grid w-full overflow-x-auto">
+        <div class="interests-grid w-full">
             <!--TOP ROW OF INTERESTS-->
             <div class="interests-grid-top w-full mb-7">
                 <!--CUBING CARD-->
-                <div style="background-color: #FFE8E8" class="rounded-xl interest-card relative overflow-hidden p-4 pt-2 flex flex-col justify-between text-center">
+                <div style="background-color: #FFE8E8" class="card-cubing rounded-xl interest-card relative p-4 pt-2 flex flex-col justify-between text-center">
                     <span style="font-family: 'Notable', sans-serif;" class="text-2xl">cubing</span>
                     <!--<div class="p-1 border border-black self-center mt-1 mb-1"></div>-->
                         <img src="@/assets/cubes.jpg" class="w-full object-cover">
@@ -114,17 +114,19 @@
 
                 <!--CONSUMING CARD-->
                 <div style="background-color: #F8F8F8;" class="rounded-xl interest-card bg-white h-full relative p-3 flex flex-col">
-                    <div class="flex gap-4 justify-between">      
+                    <div class="flex gap-4 justify-between position:relative overflow:hidden h-48">      
                         <button @click="prev" class="arrow-btn cursor-pointer">‹</button>
-                        <a :href="media[currentIndex].link" target="_blank" class="paper-card">
-                            <div class="flex flex-row items-center gap-4 p-3">
-                                <img :src="media[currentIndex].cover" class="h-40 object-cover rounded">
-                                <div>
-                                    <p style="font-family:'Basic', sans-serif;" class="text-sm mb-1">{{ media[currentIndex].title }}</p>
-                                    <p style="font-family:'Basic'" class="text-gray-400 text-xs"> {{ media[currentIndex].author }}</p>
+                        <Transition name="fade" mode="out-in">
+                            <a :key="currentIndex" :href="media[currentIndex].link" target="_blank" class="paper-card">
+                                <div class="flex flex-row items-center gap-4 p-3">
+                                    <img :src="media[currentIndex].cover" class="h-40 object-cover rounded">
+                                    <div>
+                                        <p style="font-family:'Basic', sans-serif;" class="text-sm mb-1">{{ media[currentIndex].title }}</p>
+                                        <p style="font-family:'Basic'" class="text-gray-400 text-xs"> {{ media[currentIndex].author }}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </Transition>
                         <button @click="next" class="arrow-btn cursor-pointer">›</button>
                     </div>
                     <span style="font-family:'Estedad',sans-serif;" class="text-2xl text-center mt-auto">consuming (media)</span>
@@ -153,6 +155,14 @@
     max-width: 100%
 }
 
+.interest-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+}
+
 .paper-card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -168,4 +178,15 @@
 .arrow-btn:active {
     transform: scale(0.85);
 }
+
+/* 
+consuming slide
+*/
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.2s ease;
+}   
+.fade-enter-from, .fade-leave-to {
+    opacity: 0;
+}   
 </style>

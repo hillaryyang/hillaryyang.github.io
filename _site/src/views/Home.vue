@@ -3,15 +3,6 @@ import AboutSection from '../components/AboutSection.vue'
 import ProjectsSection from '../components/ProjectsSection.vue';
 import BioSection from '../components/BioSection.vue'
 
-/*const showArrow = ref(true)
-
-function handleScroll() {
-    showArrow.value = window.scrollY > 50 ? false : true
-}
-
-onMounted(() => window.addEventListener('scroll', handleScroll))
-onUnmounted(() => window.removeEventListener('scroll', handleScroll))*/
-
 </script>
 
 <template>
